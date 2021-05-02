@@ -1,18 +1,12 @@
 let c = document.getElementById("myCanvas");
 let ctx = c.getContext("2d");
 
-// canvas.width = 500;
-// canvas.height = 500;
+var background = new Image();
+background.src = "images/background.jpg";
 
-// let drawbg = function(){
-//     let background = document.createElement("background");
-//     background.src = '/images/background.jpg';
-//     background.onload = function(){
-//     ctx.drawImage(background,0,0,500,500);
-//     }
-// }
-
-// drawbg();
+background.onload = function () {
+  ctx.drawImage(background, 0, 0);
+};
 
 let loadImage = (src, callback) => {
   let img = document.createElement("img");
